@@ -1,0 +1,16 @@
+<%- include('partials/auth-header'); -%>
+<div class="auth-signup" action="/update">
+  <h2>Create New Password</h2>
+  <form class="signup">
+    <label for="password">New Password</label>
+    <input type="password" name="password" placeholder="Enter password..." />
+    <label for="confirmPassword">Confirm New Password</label>
+    <input
+      type="password"
+      name="confirPassword"
+      placeholder="Confirm password..."
+    />
+    <button class="btn-submit">Reset</button>
+  </form>
+</div>
+<%- include('partials/footer'); -%>

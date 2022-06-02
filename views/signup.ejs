@@ -1,0 +1,47 @@
+<%- include('partials/auth-header'); -%>
+
+<div class="auth-signup">
+  <h2>Create Account</h2>
+  <form class="signup" id="signupForm">
+    <label for="username">Username</label>
+    <input
+      type="text"
+      name="username"
+      placeholder="Enter username..."
+      required
+    />
+    <div class="username error"></div>
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="Enter email..." required />
+    <div class="email error"></div>
+    <label for="number">Mobile Number</label>
+    <input
+      type="tel"
+      placeholder="254-712-345678"
+      name="number"
+      pattern="[0-9]{3}-[0-9]{3}-[0-9]{6}"
+      required
+    />
+    <div class="number error"></div>
+    <label for="password">Password</label>
+    <input
+      type="password"
+      name="password"
+      placeholder="Enter password..."
+      required
+    />
+    <div class="password error"></div>
+
+    <!-- <label for="confirmPassword">Confirm Password</label>
+    <input
+      type="password"
+      name="confirPassword"
+      placeholder="Confirm password..."
+      required
+    />
+    <div class="confirPassword error"></div> -->
+    <button class="btn-submit">Sign Up</button>
+  </form>
+  <p>Already have an account?<a href="/signin"> Sign In</a></p>
+</div>
+<%- include('partials/footer'); -%>

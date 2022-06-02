@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+  --primary-color: #555;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+/* ///////// Home /////////*/
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h3 {
+  font-weight: 400;
+}
+
+.showcase {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  color: whitesmoke;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--primary-color) url('/coffplant.jpg') no-repeat center
+    center/cover;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-container:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.content {
+  z-index: 10;
+
+  padding: 50px;
+}
+
+.navbar {
+  width: 60%;
+  position: absolute;
+  top: 10px;
+  background-color: #555;
+  overflow: auto;
+  border-radius: 5px;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #00cba9;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 50px;
+  background: var(--primary-color);
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-right: 25px;
+  margin-top: 25px;
+  font-weight: 800;
+  opacity: 0.7;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+  background-color: #00cba9;
+}
+
+/* ///////// Sign Up /////////*/
+.auth {
+  position: relative;
+}
+.auth-signup {
+  position: absolute;
+  top: 10em;
+  left: 33%;
+  width: 40%;
+  margin: auto;
+  background-color: #f3f4f5;
+  border-radius: 5px;
+  height: auto;
+  padding: 14px;
+}
+.auth-signup h2 {
+  text-align: center;
+}
+form {
+  width: 60%;
+  margin: auto;
+}
+label {
+  display: block;
+  margin: 5px;
+}
+input {
+  background-color: #f3f4f5;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  width: 100%;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+input:focus {
+  background-color: #ffffff;
+}
+.btn-submit {
+  width: 100%;
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  border: 3px solid #ffffff;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.btn-submit:hover {
+  background-color: #ffffff;
+}
+.auth-signup p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ///////// Home /////////*/
+.header {
+  height: 60px;
+  width: 100%;
+  background-color: #00cba9;
+  color: #ffffff;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  z-index: 10;
+}
+.header h2 {
+  font-family: monospace;
+  font-size: 40px;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+.container-sidebar {
+  width: 25%;
+  float: left;
+  position: fixed;
+  margin-top: 60px;
+  height: 91.5vh;
+  background-color: #00cba9;
+}
+.container-sidebar a {
+  display: block;
+  line-height: 50px;
+  cursor: pointer;
+  padding: 0 10px;
+  color: #ffffff;
+  font-weight: 500;
+  border-bottom: 1px solid #ffffff;
+}
+.active-now {
+  background: #ffffff;
+  color: #00cba9 !important;
+}
+.container-sidebar a:hover {
+  color: #00cba9;
+  background-color: #555;
+}
+.container-content {
+  margin-top: 60px;
+  width: 75%;
+  float: right;
+  height: auto;
+}
+.add-member {
+  padding: 8px 14px;
+  border-radius: 5px;
+  background-color: #00cba9;
+  color: #ffffff;
+  outline: 0;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 20px 16px;
+}
+.container-table {
+  width: 95% !important;
+  margin: auto;
+}
+.menu {
+  display: none;
+}
+.market {
+  left: 40%;
+}
+.counter {
+  margin: 25px;
+}
+.market-list {
+  position: relative;
+  margin-top: 10em;
+}
+
+/* loader */
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #fff;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #00cba9;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+.user {
+  float: left;
+}
+/* ///////// Profile /////////*/
+.profile {
+  height: 75px;
+  width: 75px;
+  position: absolute;
+  border-radius: 50%;
+  top: 220px;
+  left: 30%;
+  object-fit: cover;
+}
+hr {
+  width: 50%;
+  border: 1px solid #00cba9;
+  background-color: #00cba9;
+}
+.profile-details a {
+  display: block;
+  padding: 10px 12px;
+  border-bottom: 1px solid #00cba9;
+  width: 50%;
+}
+.error {
+  color: #ff0099;
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+/* ///////// Media Queries /////////*/
+
+@media screen and (max-width: 640px) {
+  .navbar a {
+    display: block;
+    width: 100%;
+  }
+  .navbar {
+    width: 100%;
+    text-align: justify;
+    position: relative;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  .btn {
+    width: 100%;
+  }
+  .auth-signup {
+    width: 100%;
+    left: 0;
+    top: 5em;
+  }
+  form {
+    width: 100%;
+  }
+
+  .container-sidebar {
+    display: none;
+  }
+  .container-content {
+    width: 100%;
+  }
+  .container-table {
+    overflow-x: auto;
+  }
+  .header h2 {
+    display: none;
+  }
+  .menu {
+    display: block;
+    font-size: 21px;
+  }
+  .profile {
+    top: 100px;
+    width: 60px;
+    height: 60px;
+  }
+  hr {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .profile-details a {
+    width: 100%;
+  }
+  .market-list {
+    margin-top: 18em;
+  }
+}

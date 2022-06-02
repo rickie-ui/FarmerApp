@@ -1,0 +1,40 @@
+<%- include('partials/header'); -%>
+<div class="container-content">
+  <div class="counter">
+    <a href="/addClient" class="add-member" id="add_member_form"
+      >+ Add Member</a
+    >
+  </div>
+  <!-- display::name,email,phone number,ID number,account number,coffee grade,quantitySold -->
+  <!-- Data tables -->
+  <div class="container-table">
+    <table class="row-border compact stripe hover" id="customer_list">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>ID</th>
+          <th>AccountNo</th>
+          <th>Type</th>
+          <th>Date/Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% clients.map((client)=>{ %>
+        <tr>
+          <td><%= client.fullName %></td>
+          <td><%= client.email %></td>
+          <td>+<%= client.phone %></td>
+          <td><%= client.idNumber %></td>
+          <td><%= client.accountNumber %></td>
+          <td><%= client.product %></td>
+          <td><%= client.date.toLocaleString() %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<%- include('partials/footer'); -%>

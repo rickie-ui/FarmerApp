@@ -1,0 +1,21 @@
+<%- include('partials/auth-header'); -%>
+<div class="auth-signup">
+  <h2>Log into Valleyview</h2>
+  <form class="signup" id="signinForm">
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="Enter email..." required />
+    <div class="email error"></div>
+    <label for="password">Password</label>
+    <input
+      type="password"
+      name="password"
+      placeholder="Enter password..."
+      required
+    />
+    <div class="password error"></div>
+
+    <button class="btn-submit">Sign In</button>
+  </form>
+  <p>Don't have an account?<a href="/signup"> Sign Up</a></p>
+</div>
+<%- include('partials/footer'); -%>

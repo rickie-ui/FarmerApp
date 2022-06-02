@@ -1,0 +1,58 @@
+<%- include('partials/header'); -%>
+
+<div class="container-content">
+  <div class="container-table">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave">
+      <path
+        fill="#00cba9"
+        fill-opacity="1"
+        d="M0,128L120,160C240,192,480,256,720,256C960,256,1200,192,1320,160L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+      ></path>
+    </svg>
+    <div class="auth-signup market">
+      <h2>Add New Record</h2>
+
+      <form class="signup" id="add-record">
+        <label for="marketNumber">Account Number</label>
+        <input
+          type="text"
+          name="marketNumber"
+          placeholder="Enter account number..."
+          required
+        />
+        <div class="marketNumber error"></div>
+        <label for="quantity">Quantity</label>
+        <input
+          type="text"
+          name="quantity"
+          placeholder="Enter the amount"
+          required
+        />
+        <div class="quantity error"></div>
+        <button class="btn-submit">Add Record</button>
+      </form>
+    </div>
+
+    <div class="market-list">
+      <table class="row-border stripe hover" id="market_table">
+        <thead>
+          <tr>
+            <th>Account Number</th>
+            <th>Quantity(Kg)</th>
+            <th>Date/Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% sales.map((sale)=>{ %>
+          <tr>
+            <td><%= sale.marketNumber %></td>
+            <td><%= sale.quantity %>Kgs</td>
+            <td><%= sale.date.toLocaleString() %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer'); -%>
