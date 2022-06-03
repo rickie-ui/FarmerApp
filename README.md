@@ -1,2 +1,2 @@
 # FarmerApp
-App used to store farm records
+App used to store farm records like crop production.
